@@ -11,16 +11,16 @@ public class qsh extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        PrintWriter writer = response.getWriter();
+        PrintWriter writer = resp.getWriter();
 
-        String taste = request.getParameter("taste");
+        String taste = req.getParameter("taste");
 
         if (taste == null){
-            taste = "apple";
+            taste = "world";
         }
         writer.println("<html><body>");
-        writer.println("<h1> milk with" + taste +"</h1>");
+        writer.println("<h1> hello with" + taste +"</h1>");
         writer.println("</body></html>");
     }
     }
-}
+
